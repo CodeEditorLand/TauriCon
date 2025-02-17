@@ -40,7 +40,7 @@
 		"imagemin": "9.0.0",
 		"imagemin-optipng": "8.0.0",
 		"imagemin-zopfli": "7.0.0",
-		"inquirer": "12.4.1",
+		"inquirer": "12.4.2",
 		"is-png": "3.0.1",
 		"minimist": "1.2.8",
 		"ms": "2.1.3",
