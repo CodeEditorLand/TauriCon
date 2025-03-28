@@ -1,13 +1,35 @@
 {
 	"name": "@codeeditorland/tauricon",
+	"version": "0.0.1",
+	"private": false,
 	"description": "Make icons for your Tauri app.",
+	"keywords": [
+		"codeeditorland",
+		"land",
+		"playform"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/TauriCon#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/TauriCon/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/TauriCon.git"
+	},
 	"funding": {
 		"type": "opencollective",
 		"url": "HTTPS://opencollective.com/tauri"
 	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Source 🖋️ Open 👐🏻",
+		"email": "Source/Open@Editor.Land",
+		"url": "HTTPS://Editor.Land"
+	},
 	"contributors": [
 		"Tauri Programme within The Commons Conservancy"
 	],
+	"type": "module",
 	"bin": {
 		"tauricon": "./bin/tauricon.js"
 	},
@@ -21,7 +43,7 @@
 		"build": "rimraf ./dist && rollup -c --silent",
 		"build-release": "rimraf ./dist && cross-env NODE_ENV=production rollup -c",
 		"lint:lockfile": "lockfile-lint --path yarn.lock --type yarn --validate-https --allowed-hosts npm yarn",
-		"prepublishOnly": "yarn build-release"
+		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"resolutions": {
 		"**/semver-regex": "4.0.3",
@@ -51,6 +73,7 @@
 		"update-notifier": "7.3.1"
 	},
 	"devDependencies": {
+		"@playform/build": "0.2.1",
 		"@types/cross-spawn": "6.0.6",
 		"@types/fs-extra": "11.0.4",
 		"@types/glob": "8.1.0",
@@ -67,5 +90,8 @@
 		"promise": "8.3.0",
 		"rimraf": "6.0.1",
 		"tslib": "2.8.1"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
