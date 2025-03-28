@@ -1,10 +1,32 @@
 {
-	"bin": {
-		"tauricon": "./bin/tauricon.js"
+	"name": "@codeeditorland/tauricon",
+	"description": "Make icons for your Tauri app.",
+	"funding": {
+		"type": "opencollective",
+		"url": "HTTPS://opencollective.com/tauri"
 	},
 	"contributors": [
 		"Tauri Programme within The Commons Conservancy"
 	],
+	"bin": {
+		"tauricon": "./bin/tauricon.js"
+	},
+	"files": [
+		"bin",
+		"dist",
+		"scripts",
+		"src/helpers/icns.json"
+	],
+	"scripts": {
+		"build": "rimraf ./dist && rollup -c --silent",
+		"build-release": "rimraf ./dist && cross-env NODE_ENV=production rollup -c",
+		"lint:lockfile": "lockfile-lint --path yarn.lock --type yarn --validate-https --allowed-hosts npm yarn",
+		"prepublishOnly": "yarn build-release"
+	},
+	"resolutions": {
+		"**/semver-regex": "4.0.3",
+		"**/trim-newlines": "4.0.2"
+	},
 	"dependencies": {
 		"@fiahfy/icns": "0.0.7",
 		"chalk": "5.4.1",
@@ -28,7 +50,6 @@
 		"sharp": "0.33.5",
 		"update-notifier": "7.3.1"
 	},
-	"description": "Make icons for your Tauri app.",
 	"devDependencies": {
 		"@types/cross-spawn": "6.0.6",
 		"@types/fs-extra": "11.0.4",
@@ -46,26 +67,5 @@
 		"promise": "8.3.0",
 		"rimraf": "6.0.1",
 		"tslib": "2.8.1"
-	},
-	"files": [
-		"bin",
-		"dist",
-		"scripts",
-		"src/helpers/icns.json"
-	],
-	"funding": {
-		"type": "opencollective",
-		"url": "HTTPS://opencollective.com/tauri"
-	},
-	"name": "@codeeditorland/tauricon",
-	"resolutions": {
-		"**/semver-regex": "4.0.3",
-		"**/trim-newlines": "4.0.2"
-	},
-	"scripts": {
-		"build": "rimraf ./dist && rollup -c --silent",
-		"build-release": "rimraf ./dist && cross-env NODE_ENV=production rollup -c",
-		"lint:lockfile": "lockfile-lint --path yarn.lock --type yarn --validate-https --allowed-hosts npm yarn",
-		"prepublishOnly": "yarn build-release"
 	}
 }
