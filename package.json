@@ -69,7 +69,7 @@
 		"png-to-ico": "2.1.8",
 		"read-chunk": "5.0.0",
 		"semver": "7.7.1",
-		"sharp": "0.34.0",
+		"sharp": "0.34.1",
 		"update-notifier": "7.3.1"
 	},
 	"devDependencies": {
