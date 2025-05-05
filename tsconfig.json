@@ -1,17 +1,25 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist/",
-    "strict": true,
-    "module": "es2020",
-    "target": "es5",
-    "allowJs": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "types": ["src/types"]
-    }
-  },
-  "include": ["src", "api-src"]
+	"compilerOptions": {
+		"allowJs": true,
+		"baseUrl": "./",
+		"esModuleInterop": true,
+		"module": "es2020",
+		"moduleResolution": "node",
+		"outDir": "Target",
+		"paths": {
+			"types": [
+				"src/types"
+			]
+		},
+		"resolveJsonModule": true,
+		"rootDir": "src",
+		"strict": true,
+		"target": "es5"
+	},
+	"extends": "@playform/build/tsconfig",
+	"include": [
+		"src",
+		"api-src",
+		"src"
+	]
 }
