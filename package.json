@@ -1,54 +1,18 @@
 {
-	"name": "@codeeditorland/tauricon",
-	"version": "0.0.1",
-	"private": false,
-	"description": "Make icons for your Tauri app.",
-	"keywords": [
-		"codeeditorland",
-		"land",
-		"playform"
-	],
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/TauriCon#readme",
+	"author": {
+		"email": "Source/Open@Editor.Land",
+		"name": "Source 🖋️ Open 👐🏻",
+		"url": "HTTPS://Editor.Land"
+	},
+	"bin": {
+		"tauricon": "./bin/tauricon.js"
+	},
 	"bugs": {
 		"url": "HTTPS://GitHub.Com/CodeEditorLand/TauriCon/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+HTTPS://github.com/CodeEditorLand/TauriCon.git"
-	},
-	"funding": {
-		"type": "opencollective",
-		"url": "https://opencollective.com/tauri"
-	},
-	"license": "SEE LICENSE IN LICENSE",
-	"author": {
-		"name": "Source 🖋️ Open 👐🏻",
-		"email": "Source/Open@Editor.Land",
-		"url": "HTTPS://Editor.Land"
 	},
 	"contributors": [
 		"Tauri Programme within The Commons Conservancy"
 	],
-	"type": "module",
-	"bin": {
-		"tauricon": "./bin/tauricon.js"
-	},
-	"files": [
-		"bin",
-		"dist",
-		"scripts",
-		"src/helpers/icns.json"
-	],
-	"scripts": {
-		"build": "rimraf ./dist && rollup -c --silent",
-		"build-release": "rimraf ./dist && cross-env NODE_ENV=production rollup -c",
-		"lint:lockfile": "lockfile-lint --path yarn.lock --type yarn --validate-https --allowed-hosts npm yarn",
-		"prepublishOnly": "Build 'Source/**/*.ts'"
-	},
-	"resolutions": {
-		"**/semver-regex": "4.0.3",
-		"**/trim-newlines": "4.0.2"
-	},
 	"dependencies": {
 		"@fiahfy/icns": "0.0.7",
 		"chalk": "5.0.1",
@@ -72,6 +36,7 @@
 		"sharp": "0.30.5",
 		"update-notifier": "5.1.0"
 	},
+	"description": "Make icons for your Tauri app.",
 	"devDependencies": {
 		"@playform/build": "0.2.3",
 		"@types/cross-spawn": "6.0.2",
@@ -91,7 +56,42 @@
 		"rimraf": "3.0.2",
 		"tslib": "2.4.0"
 	},
+	"files": [
+		"bin",
+		"dist",
+		"scripts",
+		"src/helpers/icns.json"
+	],
+	"funding": {
+		"type": "opencollective",
+		"url": "https://opencollective.com/tauri"
+	},
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/TauriCon#readme",
+	"keywords": [
+		"codeeditorland",
+		"land",
+		"playform"
+	],
+	"license": "SEE LICENSE IN LICENSE",
+	"name": "@codeeditorland/tauricon",
+	"private": false,
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/TauriCon.git"
+	},
+	"resolutions": {
+		"**/semver-regex": "4.0.3",
+		"**/trim-newlines": "4.0.2"
+	},
+	"scripts": {
+		"build": "rimraf ./dist && rollup -c --silent",
+		"build-release": "rimraf ./dist && cross-env NODE_ENV=production rollup -c",
+		"lint:lockfile": "lockfile-lint --path yarn.lock --type yarn --validate-https --allowed-hosts npm yarn",
+		"prepublishOnly": "Build 'Source/**/*.ts'"
+	},
+	"type": "module",
+	"version": "0.0.1"
 }
