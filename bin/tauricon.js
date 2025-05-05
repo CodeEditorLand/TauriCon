@@ -2,9 +2,9 @@
 // Copyright 2019-2021 Tauri Programme within The Commons Conservancy
 // SPDX-License-Identifier: Apache-2.0
 // SPDX-License-Identifier: MIT
-import parseArgs from "minimist";
 
-import tauricon from "../dist/tauricon.js";
+import parseArgs from 'minimist'
+import tauricon from '../dist/tauricon.js'
 
 /**
  * @type {object}
@@ -22,16 +22,16 @@ import tauricon from "../dist/tauricon.js";
  * @property {boolean} target
  */
 const argv = parseArgs(process.argv.slice(2), {
-	alias: {
-		h: "help",
-		l: "log",
-		t: "target",
-	},
-	boolean: ["h", "l"],
-});
+  alias: {
+    h: 'help',
+    l: 'log',
+    t: 'target'
+  },
+  boolean: ['h', 'l']
+})
 
 if (argv.help) {
-	console.log(`
+  console.log(`
   Description
     Create all the icons you need for your Tauri app.
 
@@ -45,17 +45,17 @@ if (argv.help) {
     --help, -h          Displays this message
     --log, l            Logging [boolean]
     --target, t         Target folder (default: 'src-tauri/icons')
-    `);
-	process.exit(0);
+    `)
+  process.exit(0)
 }
 
 tauricon
-	.make(argv._[0], argv.t, "optipng")
-	.then(() => {
-		// TODO: use logger module for prettier output
-		console.log("app:tauri (tauricon) Completed");
-	})
-	.catch((e) => {
-		// TODO: use logger module for prettier output
-		console.error("app:tauri (icon)", e);
-	});
+  .make(argv._[0], argv.t, 'optipng')
+  .then(() => {
+    // TODO: use logger module for prettier output
+    console.log('app:tauri (tauricon) Completed')
+  })
+  .catch((e) => {
+    // TODO: use logger module for prettier output
+    console.error('app:tauri (icon)', e)
+  })
