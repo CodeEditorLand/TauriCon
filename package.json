@@ -38,7 +38,7 @@
 	},
 	"description": "Make icons for your Tauri app.",
 	"devDependencies": {
-		"@playform/build": "0.2.3",
+		"@playform/build": "0.2.4",
 		"@types/cross-spawn": "6.0.2",
 		"@types/fs-extra": "9.0.13",
 		"@types/glob": "7.2.0",
